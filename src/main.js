@@ -139,7 +139,7 @@ Apify.main(async () => {
                 await page.waitFor(10000);
                 await page.waitForSelector('body')
             }
-            if(input.deliver !== ''){
+            if(input.delivery !== ''){
                 const cookies = JSON.parse(JSON.stringify(session.cookieJar))["cookies"];
                 const cookie = cookies.find(x => x.key === 'sp-cdn');
                 const deliverCountry = input.delivery.split(',');
